@@ -37,16 +37,16 @@ Step 3:
 -	Auto-Assign Public IP: Enable
 -	Advanced details: on user data, tick “As text” and fill with the following script
 
-#!/bin/bash
-#install R
-yum install -y R
-#install RStudio-Server 1.0.153 (2017-07-20)
-wget https://download2.rstudio.org/rstudio-server-rhel-1.0.153-x86_64.rpm
-yum install -y --nogpgcheck rstudio-server-rhel-1.0.153-x86_64.rpm
-rm rstudio-server-rhel-1.0.153-x86_64.rpm
-#add user(s)
-useradd Alexa
-echo Alexa:amazon | sudo chpasswd
+#!/bin/bash\
+#install R\
+yum install -y R\
+#install RStudio-Server 1.0.153 (2017-07-20)\
+wget https://download2.rstudio.org/rstudio-server-rhel-1.0.153-x86_64.rpm\
+yum install -y --nogpgcheck rstudio-server-rhel-1.0.153-x86_64.rpm\
+rm rstudio-server-rhel-1.0.153-x86_64.rpm\
+#add user(s)\
+useradd Alexa\
+echo Alexa:amazon | sudo chpasswd\
 
 Step 5: Add Tags (optional)
 Step 6: Tick “Select an existing security group” and choose the security group created previously
@@ -61,4 +61,4 @@ Example: XX.XXX.XXX.XXX:8787
 -	A “Sign in to RStudio” page should open
 -	Enter the Username and Password (according to the script, here it is “Alexa” and “amazon”) and sign in
 
-:+1+	Enjoy RStudio ! :)
+:+1+:	Enjoy RStudio ! :)
