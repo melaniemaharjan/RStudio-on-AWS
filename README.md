@@ -2,19 +2,19 @@
 This tutorial explains you how to run RStudio using AWS
 
 
-1/ CREATE A KEY PAIR
+## 1/ CREATE A KEY PAIR
 Give a “key pair name” and keep the file downloaded
 
-2/ CREATE A VPC
+## 2/ CREATE A VPC
 On VPC Dashboard: click “Start VPC Wizard”
 Step 1: Select “VPC with a Single Public Subnet”
 Step 2:
 -	Give a name to the VPC
 -	Optional: choose an availability zone
 
-	Your VPC is created 
+:arrow_right:	Your VPC is created 
 
-3/ CREATE A SECURITY GROUP
+## 3/ CREATE A SECURITY GROUP
 On VPC dashboard click on “Security Groups” and “Create Security Group”
 Step 1:
 -	Give “Name tag” and “Description”
@@ -25,9 +25,9 @@ Step 2:
 -	Add “SSH” type and type “ 0.0.0.0/0” in “Source”
 -	Add “Custom TCP Rule”. Type “8787” in “Port Range” and “ 0.0.0.0/0” in “Source”
 
-	Your Security Group is created
+:arrow_right:	Your Security Group is created
 
-4/ LAUNCH AN INSTANCE
+## 4/ LAUNCH AN INSTANCE
 On EC2 Dashboard: click “Launch instance”
 Step 1: Select the first Amazon Machine Image “Amazon Linux AMI”
 Step 2: Choose t2.micro instance type
@@ -51,9 +51,9 @@ echo Alexa:amazon | sudo chpasswd
 Step 5: Add Tags (optional)
 Step 6: Tick “Select an existing security group” and choose the security group created previously
 
-	Your instance is created
+:arrow_right:	Your instance is created
 
-5/ LAUNCH RSTUDIO
+## 5/ LAUNCH RSTUDIO
 On EC2 Dashboard go to “Instances”
 -	Select your instance
 -	On the tab “Description”, copy the “IPv4 Public IP” and paste it on your browser adding “:8787” at the end
@@ -61,4 +61,4 @@ Example: XX.XXX.XXX.XXX:8787
 -	A “Sign in to RStudio” page should open
 -	Enter the Username and Password (according to the script, here it is “Alexa” and “amazon”) and sign in
 
-	Enjoy RStudio ! :)
+:+1+	Enjoy RStudio ! :)
